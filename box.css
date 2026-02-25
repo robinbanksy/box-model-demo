@@ -1,0 +1,10 @@
+* {
+    margin: 10px;
+    padding: 10px;
+    border: solid black 1px;
+}
+
+.outer {
+    margin: 50px;
+    border-style: dashed;
+}
