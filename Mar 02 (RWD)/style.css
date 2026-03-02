@@ -32,11 +32,11 @@
 
 nav.content {
     background-color: var(--accent-color);
+    height: 3rem;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 nav.content a {
