@@ -3,23 +3,14 @@
     font-weight: 700;
 }
 
-.tight {
-    transition: all 0.3s ease;
-}
 .tight:hover {
     line-height: 1rem;
 }
 
-.loose {
-    transition: all 0.3s ease;
-}
 .loose:hover {
     line-height: 5rem;
 }
 
-.wide {
-    transition: all 0.3s ease;
-}
 .wide:hover {
     letter-spacing: 0.5rem;
 }
