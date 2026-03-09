@@ -54,6 +54,7 @@ h1 {
     justify-content: center;
     align-items: center;
     border: 2px solid var(--color-accent);
+    border-radius: 10px;
     transition: 200ms ease;
     text-decoration: none;
     color: var(--color-fg);
@@ -67,61 +68,4 @@ h1 {
     border-radius: 50%;
     margin-top: 1rem;
     transition: all 100ms ease;
-}
-
-.card:hover .color-change {
-    animation: color-change 2000ms linear 1;
-
-}
-
-.card:hover .orbit {
-    animation: orbit 800ms ease-in-out infinite;
-}
-
-.card:hover .multiple-animations {
-    animation: orbit 800ms ease-in-out infinite, color-change 800ms ease-in-out infinite;
-}
-
-.card:hover .flip {
-    animation-name: flip, color-change;
-    animation-duration: 1s, 800ms;
-    animation-timing-function: ease-in-out, ease-in-out;
-    animation-iteration-count: 1, 1;
-    animation-delay: 0s, 1s;
-}
-
-@keyframes color-change {
-    0% {
-        background-color: var(--color-fg);
-    }
-    25% {
-        background-color: var(--color-primary);
-    }
-    50% {
-        background-color: var(--color-fg);
-    }
-    75% {
-        background-color: var(--color-accent);
-    }
-    100% {
-        background-color: var(--color-fg);
-    }
-}
-
-@keyframes orbit {
-    0% {
-        transform: rotate(0deg) translateX(50px) rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg) translateX(50px) rotate(-360deg);
-    }
-}
-
-@keyframes flip {
-    0% {
-        transform: rotateY(0deg);
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
 }
