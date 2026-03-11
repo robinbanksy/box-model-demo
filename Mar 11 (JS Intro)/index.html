@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>March 11</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>JavaScript Introduction</h1>
+        </header>
+        <section class="content">
+            <h2>History</h2>
+            <p>During the early days of the web, all pages were static. This meant that once a page was loaded, it couldn't dynamically change content without a reload of the whole page. In order to remedy this, Netscape, the creators of Netscape Navigator, at the time the most popular GUI web browser, wanted to embed a programming language in their browser. An early idea was to use the popular Java language, but instead, a new language was developed with the goal of being easier for non-programmers to learn and use. The laguage was called JavaScript, partially as a marketing ploy to associate the new language with Java, which was extremely popular at the time, despite having no relation to the Java language.</p>
+        </section>
+        <section class="content">
+            <h2>JS Runtime</h2>
+            <p>Traditional programming languages work in a system of source code and machine code. For example, a program written in the C language is written, and then fed to a program called a compiler, which translates the program into binary machine code, which can be natively run on the targeted hardware.</p>
+            <p>JavaScript is different. It is not compiled into machine code, so it requires a special <strong>"runtime environment"</strong> to execute the program. Originally, since JavaScript was designed for web browsers, this runtime environment was embedded in the browser. As a result, JavaScript could only run in-browser. Since then, the runtime environment has been extended to other platforms, such as Node.js, which allows JavaScript to be run on the server-side (i.e., outside of the browser).</p>
+        </section>
+        <section class="content">
+            <h2>Node.js</h2>
+            <p><strong>Node.js</strong> is a server-side JavaScript runtime environment. Think of it as the same JavaScript engine originally meant for the browser, but taken out of the browser environment.</p>
+            <p>In order to use Node, you'll need to install it: <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download</a></p>
+            <p>Once you've got Node installed, you can start a Node.js server by running the command <strong>node</strong> in your terminal.</p>
+        </section>
+        <section class="content">
+            <h2>Programming Intro</h2>
+            <p>Within our Node environment, we can execute single lines of JavaScript code directly in the terminal. Try entering the following lines and note their results:</p>
+            <pre><code>2+2</code></pre>
+            <pre><code>4</code></pre>
+            <pre><code>2>3</code></pre>
+            <pre><code>console.log("Hello, world!")</code></pre>
+            <p>Of course, if we want to do more interesting things, we're going to have to write more complex programs. We'll do this by creating a JavaScript file, with the .js extension.</p>
+        </section>
+        <section class="content">
+            <h2>Variables</h2>
+            <p>Variables are used to store data in JavaScript. You can create a variable using the <strong>let</strong> keyword.</p>
+            <pre><code>let x = 5;</code></pre>
+            <p>You can then use the variable in your code:</p>
+            <pre><code>console.log(x);</code></pre>
+            <p>Once a variable is declared, you can change its value:</p>
+            <pre><code>x = 10;</code></pre>
+            <pre><code>console.log(x);</code></pre>
+            <p>Notice that we don't use the <strong>let</strong> keyword again when reassigning a value to an existing variable. That would effectively be declaring the variable again, which would result in a syntax error.</p>
+            <p>Similar to let, you can also use the <strong>const</strong> keyword to declare a variable that cannot be reassigned:</p>
+            <pre><code>const y = 10;</code></pre>
+            <pre><code>console.log(y);</code></pre>
+            <p>Attempting to reassign a value to a <strong>const</strong> variable will result in a syntax error.</p>
+            <pre><code>y = 15; <span class="comment">\\ This will cause a syntax error</span></code></pre>
+        </section>
+        <section class="content">
+            <h2>Data Types</h2>
+            <p>Data types are the different categories of values that variables can hold in JavaScript. We've already seen a few data types in action:</p>
+            <p>Numbers: Any numbers, including integers and floating-point numbers</p>
+            <pre><code>let num = 5;</code></pre>
+            <p>Strings: Text values enclosed in quotes</p>
+            <pre><code>let str = "Hello, world!";</code></pre>
+            <p>Booleans: Logical values that are either <strong>true</strong> or <strong>false</strong></p>
+            <pre><code>let bool = true;</code></pre>
+        </section>
+        <section class="content">
+            <h2>Conditional Statements</h2>
+            <p>Conditional statements allow you to execute different blocks of code based on certain conditions.</p>
+<pre><code>if (x > 5) {
+    console.log("x is greater than 5");
+}</code></pre>
+            <p>In the above code, the console.log statement will only execute if the condition (x > 5) is true. Notice that the condition is specified in the form of a boolean expression; in other words, it evaluates to either true or false.</p>
+            <p>You can also add an <strong>else</strong> block to execute code when the condition is false:</p>
+<pre><code>if (x > 5) {
+    console.log("x is greater than 5");
+} else {
+    console.log("x is not greater than 5");
+}</code></pre>
+            <p>In this case, if the condition (x > 5) is false, the code in the else block will execute instead.</p>
+            <p>Even more complex conditional logic can be achieved using <strong>else if</strong> statements:</p>
+<pre><code>if (x > 5) {
+    console.log("x is greater than 5");
+} else if (x === 5) {
+    console.log("x is equal to 5");
+} else {
+    console.log("x is less than 5");
+}</code></pre>
+            <p>In this case, the code will check the first condition (x > 5) and execute the corresponding block if it's true. If it's false, it will check the second condition (x === 5) and execute that block if it's true. If both conditions are false, it will execute the else block.</p>
+            <p>We could string together multiple else if statements to create even more complex conditional logic.</p>
+        </section>
+        <section class="content">
+            <h2>Functions</h2>
+            <p>Functions are blocks of code that can be defined once and called multiple times throughout your program.</p>
+            <pre><code>function greet(name) {
+    console.log("Hello, " + name + "!");
+}</code></pre>
+            <p>In the above code, we define a function named <strong>greet</strong> that takes one parameter, <strong>name</strong>. When the function is called, it will execute the code inside the function body.</p>
+<pre><code>greet("Alice"); <span class="comment">// Output: Hello, Alice!</span>
+greet("Bob");   <span class="comment">// Output: Hello, Bob!</span></code></pre>
+            <p>Functions can also return values using the <strong>return</strong> keyword:</p>
+<pre><code>function add(a, b) {
+    return a + b;
+}</code></pre>
+            <p>In this case, the add function takes two parameters, a and b, and returns their sum. We can call the function and store its return value in a variable:</p>
+<pre><code>let sum = add(3, 4);
+console.log(sum); <span class="comment">// Output: 7</span></code></pre>
+        </section>
+        <footer>
+            <a href="https://github.com/robinbanksy/PNY-web-dev">Github Repository</a>
+            <p>&copy; 2026 Umair Almahmood</p>
+        </footer>
+    </div>
+</body>
+</html>
