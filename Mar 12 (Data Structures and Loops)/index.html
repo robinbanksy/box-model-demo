@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>March 12</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Data Structures and Loops</h1>
+        </header>
+        <section class="content">
+            <h2>Data Structures</h2>
+            <p>In the previous class, we covered primitive data types, like numbers, strings, and booleans. But JavaScript also provides more complex ways of storing and manipulating data, called <strong>data structures</strong>.</p>
+            <p>These data structures are a kind of "compound" data type, combining multiple values into a single unit. Different data structures serve different purposes and have unique characteristics.</p>
+        </section>
+        <section class="content">
+            <h2>Arrays</h2>
+            <p><strong>Arrays</strong>, or lists, are ordered collections of values. Each value in an array is called an <strong>element</strong>, and each element has a unique <strong>index</strong> that can be used to access it.</p>
+            <p>Arrays are useful for storing and manipulating collections of data, such as lists of names, numbers, or objects:</p>
+<pre><code>const fruits = ['apple', 'banana', 'cherry'];
+console.log(fruits[0]); <span class="comment">// Output: 'apple'</span></code></pre>
+            <p>Array elements can be reassigned, like normal variables:</p>
+<pre><code>fruits[0] = 'grape';
+console.log(fruits[0]); <span class="comment">// Output: 'grape'</span></code></pre>
+        </section>
+        <section class="content">
+            <h2>Objects</h2>
+            <p><strong>Objects</strong> are collections of <strong>key-value pairs</strong>. Each key is a string (or symbol), and each value can be any data type, including other objects or functions.</p>
+<pre><code>const user = {
+    name: 'Tim',
+    age: 25,
+    email: 'tim@example.com'
+};
+
+console.log(user.name); <span class="comment">// Output: 'Tim'</span></code></pre>
+        <p>As seen above, object properties can be accessed using dot notation.</p>
+        </section>
+        <section class="content">
+            <h2>Loops</h2>
+            <p><strong>Loops</strong> are a fundamental programming construct that allow us to repeat a block of code multiple times. They are essential for working with data structures, as they enable us to iterate over arrays and objects.</p>
+            <p>There are several types of loops in JavaScript, including for loops, while loops, and do while loops.</p>
+        </section>
+        <section class="content">
+            <h2>For Loops</h2>
+            <p><strong>For loops</strong> are used to iterate over arrays or execute a block of code a specific number of times.</p>
+<pre><code>for (let i = 0; i < 5; i++) {
+    console.log(i);
+}</code></pre>
+            <p>In the above example, the for loop iterates 5 times, logging the value of `i` to the console.</p>
+            <pre><code>for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}</code></pre>
+            <p>In this example, the for loop iterates over the fruits array and logs each fruit to the console.</p>
+        </section>
+        <section class="content">
+            <h2>For of Loops</h2>
+            <p><strong>For of loops</strong> are a variant of the for loop used specifically to iterate over the values of an <strong>iterable</strong> object, such as an array.</p>
+<pre><code>for (const fruit of fruits) {
+    console.log(fruit);
+}</code></pre>
+            <p>This is functionally the same as the previous example, but with a more concise syntax.</p>
+        </section>
+        <section class="content">
+            <h2>While Loops</h2>
+            <p><strong>While loops</strong> execute a block of code as long as a specified condition is true.</p>
+<pre><code>let count = 0;
+while (count < 5) {
+    console.log(count);
+    count++;
+}</code></pre>
+            <p>In this example, the while loop continues to execute as long as `count` is less than 5, logging the value of `count` and then incrementing it.</p>
+            <p>While loops are often useful when the number of necessary iterations is not known in advance.</p>
+            <pre><code>while(true) {
+    // This loop will run indefinitely
+    if(condition) {
+        break; <span class="comment">// Exit the loop if a certain condition is met</span>
+    }
+}</code></pre>
+        </section>
+        <section class="content">
+            <h2>Do While Loops</h2>
+            <p><strong>Do while loops</strong> are similar to while loops, but they execute the block of code at least once before checking the condition.</p>
+<pre><code>let count = 6;
+do {
+    console.log(count);
+    count++;
+} while (count < 5);</code></pre>
+            <p>In the above example, the do while loop will execute the block of code at least once, then continue executing as long as `count` is less than 5. Since `count` is initialized to 6, the loop will only execute once before the condition is checked.</p>
+        </section>
+        <section class="content">
+            <h2>Classes</h2>
+            <p><strong>Classes</strong> are a way to define 'blueprints' for creating objects in JavaScript. They provide a convenient syntax for creating objects and managing their properties and methods.</p> 
+            <p>We use classes when we need to create multiple objects with similar properties and methods.</p>
+<pre><code>class PlayingCard {
+    constructor(suit, rank) {
+        this.suit = suit;
+        this.rank = rank;
+    }
+}</code></pre>
+            <p>In this example, we define a class called `PlayingCard` with a <strong>constructor</strong> that takes two parameters: `suit` and `rank`. The constructor initializes the properties of the object when it is created.</p>
+            <p>We can then create instances of the `PlayingCard` class by calling the constructor with specific values for `suit` and `rank`:</p>
+<pre><code>const card1 = new PlayingCard('hearts', 'A');
+const card2 = new PlayingCard('spades', '10');
+console.log(card1.suit); <span class="comment">// Output: 'hearts'</span>
+console.log(card2.rank); <span class="comment">// Output: '10'</span></code></pre>
+        </section>
+        <section class="content">
+            <h2>Challenges</h2>
+            <p>Write a function called 'series' that takes an array of numbers and returns the sum of all the numbers in the array.</p>
+            <p>Add a function called 'getValue' to the `PlayingCard` class that returns the value of the card (Aces are worth 11 points, and face cards are worth 10 points)</p>
+        </section>
+        
+        <footer>
+            <a href="https://github.com/robinbanksy/PNY-web-dev">Github Repository</a>
+            <p>&copy; 2026 Umair Almahmood</p>
+        </footer>
+    </div>
+</body>
+</html>

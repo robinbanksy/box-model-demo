@@ -1,7 +1,7 @@
 // Data Structures and Loops
 
 // Arrays
-// let myArray = [1, 2, 3, 4, 5];
+//let myArray = [1, 2, 3, 4, 5];
 
 // Accessing elements
 // console.log(myArray[0]); 
